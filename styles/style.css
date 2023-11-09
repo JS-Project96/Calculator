@@ -10,10 +10,16 @@
 .calculator div {
     display: flex;
     width: 100%;
+    padding-right: 2%;
     justify-content: flex-end;
+    align-items: center;
+    font-size: 30px;
+    border-style: solid;
+    border-width: 2px;
 }
 
 .calculator button {
     font-size: 30px;
     width: 25%;
+    border-style: solid;
 }
