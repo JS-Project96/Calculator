@@ -14,9 +14,9 @@ function divide(a, b) {
     return a / b;
 }
 
-let firstNumber;
+let firstNumber = 0;
 let operator;
-let secondNumber;
+let secondNumber = 0;
 let displayValue = '';
 
 function operate(firstNumber, secondNumber, operator){
@@ -38,7 +38,9 @@ for (let i=0; i < calcButtons.length; i++) {
 };
 
 plusButton.addEventListener('click',() => {
-    firstNumber = displayValue;
+    if (firstNumber === 0) {
+        firstNumber = displayValue;
+    };
     displayValue = '';
     display.textContent = 0;
     operator = add;
