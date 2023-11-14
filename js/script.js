@@ -36,3 +36,10 @@ for (let i=0; i < calcButtons.length; i++) {
         display.textContent = displayValue;
     })
 };
+
+plusButton.addEventListener('click',() => {
+    firstNumber = displayValue;
+    displayValue = '';
+    display.textContent = 0;
+    operator = add;
+});
