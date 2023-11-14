@@ -50,7 +50,7 @@ plusButton.addEventListener('click',() => {
     operator = add;
 });
 
-minusButton.addEventListener('click',() => {
+subtractButton.addEventListener('click',() => {
     overrideLogic();
     operator = subtract;
 });
