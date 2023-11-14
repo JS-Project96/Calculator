@@ -25,6 +25,10 @@ function operate(firstNumber, secondNumber, operator){
 
 const calcButtons = document.querySelectorAll('.numbers');
 const display = document.querySelector('.display');
+const plusButton = document.querySelector('.plus');
+const minusButton = document.querySelector('.minus');
+const multiplyButton = document.querySelector('.multiply');
+const divideButton = document.querySelector('.divide');
 
 for (let i=0; i < calcButtons.length; i++) {
     calcButtons[i].addEventListener('click', () => {
