@@ -37,11 +37,15 @@ for (let i=0; i < calcButtons.length; i++) {
     })
 };
 
-plusButton.addEventListener('click',() => {
+function overrideLogic() {
     if (firstNumber === 0) {
         firstNumber = displayValue;
     };
     displayValue = '';
     display.textContent = 0;
+}
+
+plusButton.addEventListener('click',() => {
+    overrideLogic();
     operator = add;
 });
