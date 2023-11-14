@@ -26,7 +26,7 @@ function operate(firstNumber, secondNumber, operator){
 const calcButtons = document.querySelectorAll('.numbers');
 const display = document.querySelector('.display');
 const plusButton = document.querySelector('.plus');
-const minusButton = document.querySelector('.minus');
+const subtractButton = document.querySelector('.subtract');
 const multiplyButton = document.querySelector('.multiply');
 const divideButton = document.querySelector('.divide');
 
@@ -43,7 +43,7 @@ function overrideLogic() {
     };
     displayValue = '';
     display.textContent = 0;
-}
+};
 
 plusButton.addEventListener('click',() => {
     overrideLogic();
@@ -52,7 +52,7 @@ plusButton.addEventListener('click',() => {
 
 minusButton.addEventListener('click',() => {
     overrideLogic();
-    operator = minus;
+    operator = subtract;
 });
 
 multiplyButton.addEventListener('click',() => {
