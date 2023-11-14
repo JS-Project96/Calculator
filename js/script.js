@@ -49,3 +49,18 @@ plusButton.addEventListener('click',() => {
     overrideLogic();
     operator = add;
 });
+
+minusButton.addEventListener('click',() => {
+    overrideLogic();
+    operator = minus;
+});
+
+multiplyButton.addEventListener('click',() => {
+    overrideLogic();
+    operator = multiply;
+});
+
+divideButton.addEventListener('click',() => {
+    overrideLogic();
+    operator = divide;
+});
