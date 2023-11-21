@@ -20,6 +20,8 @@ let secondNumber = 0;
 let displayValue = '';
 
 function operate(firstNumber, secondNumber, operator){
+    firstNumber = Number(firstNumber);
+    secondNumber = Number(secondNumber);
     return operator(firstNumber, secondNumber);
 };
 
@@ -29,6 +31,7 @@ const plusButton = document.querySelector('.plus');
 const subtractButton = document.querySelector('.subtract');
 const multiplyButton = document.querySelector('.multiply');
 const divideButton = document.querySelector('.divide');
+const equalsButton = document.querySelector('.equals');
 
 for (let i=0; i < calcButtons.length; i++) {
     calcButtons[i].addEventListener('click', () => {
@@ -63,4 +66,13 @@ multiplyButton.addEventListener('click',() => {
 divideButton.addEventListener('click',() => {
     overrideLogic();
     operator = divide;
+});
+
+equalsButton.addEventListener('click', () => {
+    if (secondNumber === 0) {
+        secondNumber = displayValue;
+    };
+    displayValue = '';
+    ans = operate(firstNumber, secondNumber, operator);
+    display.textContent = ans;
 });
